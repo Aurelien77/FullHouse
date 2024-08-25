@@ -1,0 +1,79 @@
+.slider {
+    position: absolute;
+    bottom: 0; /* Positionne le slider en bas de l'écran */
+    left: 0; /* Aligne le slider à gauche de l'écran */
+    width: 100vw; /* Prend toute la largeur de l'écran */
+    height: 50vh; /* Prend environ la moitié de la hauteur de l'écran */
+    overflow: hidden; /* Évite le débordement des cartes */
+  }
+  
+  .swiper-container {
+    height: 100%;
+  }
+  
+  .swiper-wrapper {
+
+    display: flex; /* Assure que les diapositives sont alignées en ligne */
+    align-items: center; /* Centre les diapositives verticalement */
+  }
+  
+  .swiper-slide {
+    width: 20vw; /* Largeur des diapositives ajustée */
+    height: 40vh; /* Hauteur des diapositives */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px; /* Coins arrondis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease; /* Animation fluide */
+    position: relative; /* Position relative pour les décalages */
+  }
+  
+  /* Carte active */
+  .swiper-slide-active {
+    transform: scale(1.1) translateY(-2vw) rotate(0deg); /* Agrandit et positionne la carte active */
+    z-index: 10; /* Carte active au-dessus des autres */
+    margin-top: -2vh;
+  }
+  
+  /* Carte suivante */
+  .swiper-slide-next {
+    transform: rotate(-20deg) translateY(2vw);
+    margin-top: 2vh;
+  }
+  
+  /* Carte précédente */
+  .swiper-slide-prev {
+    transform: rotate(20deg) translateY(2vw); 
+    margin-top: 2vh;
+  }
+  
+  /* Carte suivante suivante */
+  .swiper-slide-next-next {
+    transform: rotate(-40deg) translateY(4vw); 
+    margin-top: 4vh;
+  }
+  
+  /* Carte précédente précédente */
+  .swiper-slide-prev-prev {
+    transform: rotate(40deg) translateY(4vw); 
+    margin-top: 4vh;
+  }
+  
+  .cartes {
+    height: 43vh; /* Ajustez la hauteur des cartes */
+    width: 16vw; /* Ajustez la largeur des cartes */
+    border-radius: 15px;
+    background-color: aliceblue;
+    border: 2px solid gold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cartes:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
